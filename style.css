@@ -80,11 +80,11 @@ body {
   color: var(--light-black);
   font-size: 1rem;
   padding-bottom: 2rem;
-}
+}/*
 .d-flex{
   padding-left: 6rem;
   padding-right:6rem;
-}
+}*/
 .d-flex .card {
 text-align: center;
 margin: 18px 10px 40px;
@@ -93,13 +93,10 @@ transition: transform 0.2s ease-in
 .d-flex .card:hover {
 transform: translateY(-15px);
 }
-
 .d-flex > div {
 border-color:#047aed;
 border-width: thin;
 color:var(--bggradient);;
-margin: 10px;
-padding: 20px;
 font-size: 30px;
 }
 /* case studies */
@@ -110,16 +107,27 @@ font-size: 30px;
 #selectus .container{
   margin: 0;
   padding: 0;
+  position: relative;
 }
 .cus{
  padding:4rem;
 }
+
 .selectus-img{
-  width: 20rem;
+  width: 20%;
   border: 2rem solid white;
   position: absolute;
-  top:5rem;
-  left: 10rem;
+  top: 20%;
+  left: 20%;
+  transform: translate(-20%, -20%);
+  
+}
+.selectcircle{
+  width: 50%;
+  position: absolute;
+  top:0;
+  left: 0;
+  z-index: 1;
 }
 /* FOOTER */
 
@@ -237,6 +245,7 @@ footer ul a {
   #showcase{
     margin-top: 5rem;
     padding: 0 !important;
+    padding-top: 2rem !important;
     padding-bottom: 4rem !important;
   }
   
