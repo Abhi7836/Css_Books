@@ -76,7 +76,7 @@ body {
     }
   }
 #showcase .startbtn{
-   animation: movebtn .5s;
+   animation: movebtn 5s;
    animation-fill-mode: forwards;
    z-index: 2;
    position: fixed;
@@ -86,17 +86,7 @@ body {
    color: white;
    border-radius: 50%;
    font-size: 1.5rem;
-}/*
-@keyframes movebtn{
-  
-  100%{
-    position: fixed;
-    bottom:3rem;
-    right:2rem;
-    background-color:#ef4b6c;
-   
-  }
-}*/
+}
 
 /* about */
 #about .row .col-md-5 .panel{ 
