@@ -48,8 +48,7 @@ body {
     bottom:0;
     left:0;
     background: url("assets/wave-small.png") center no-repeat;
-   
-   background-size:cover;
+    background-size:cover;
    }
 #showcase h1{
   font-size:3.5rem;
@@ -75,6 +74,28 @@ body {
       background-position: 100% 50%;
     }
   }
+#showcase .startbtn{
+   animation: movebtn .5s;
+   animation-fill-mode: forwards;
+   z-index: 2;
+   position: fixed;
+   bottom:3rem;
+   right:2rem;
+   background-color:#ef4b6c;
+   color: white;
+   border-radius: 50%;
+   font-size: 1.5rem;
+}/*
+@keyframes movebtn{
+  
+  100%{
+    position: fixed;
+    bottom:3rem;
+    right:2rem;
+    background-color:#ef4b6c;
+   
+  }
+}*/
 
 /* about */
 #about .row .col-md-5 .panel{ 
@@ -86,6 +107,10 @@ body {
   box-shadow: 0px 25px 42px rgba(0, 0, 0, 0.2);
   font-family: var(--Rubik);
   }
+/*Workflow */
+#workflow .card:hover{
+ transform: scale(1.1);
+}
 /* course */
 .purchase > h1 {
   padding-top: 3rem;
@@ -96,11 +121,7 @@ body {
   color: var(--light-black);
   font-size: 1rem;
   padding-bottom: 2rem;
-}/*
-.d-flex{
-  padding-left: 6rem;
-  padding-right:6rem;
-}*/
+}
 .d-flex .card {
 text-align: center;
 margin: 18px 10px 40px;
@@ -128,7 +149,17 @@ font-size: 30px;
 .cus{
  padding:4rem;
 }
-
+.fa-atom{
+  animation: rotation 4s linear infinite;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
 .selectus-img{
   width: 20%;
   border: 2rem solid white;
@@ -136,14 +167,34 @@ font-size: 30px;
   top: 20%;
   left: 20%;
   transform: translate(-20%, -20%);
-  
-}
+  z-index: 1;
+} 
 .selectcircle{
   width: 50%;
   position: absolute;
   top:0;
   left: 0;
-  z-index: 1;
+  animation: selectcircle 90s linear infinite;
+}
+@keyframes selectcircle{
+  0%{  top:0%;left:0%;}
+  25%{top:0%;left:40%;}
+  50%{top:50%;left:40%;}
+  75%{top:50%;left:0%}
+  100%{top:0%;left:0%;}
+}
+/*case studies*/
+#casestudies .img-hover-zoom{
+  height: 130px;
+  width: 130px;
+  overflow: hidden;
+}
+#casestudies img{
+  transition: transform .5s ease;
+}
+#casestudies img:hover{
+  opacity: 0.8;
+  transform: scale(1.1);
 }
 /* FOOTER */
 footer .fab{
